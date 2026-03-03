@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PETRÁN A PARTNERI - Advokátska kancelária v Prešove s viac ako 20-ročnou tradíciou. Poskytujeme komplexné právne služby v oblasti trestného, občianskeho, obchodného a daňového práva.">
+    <meta name="description" content="PETRÁN A PARTNERI - Advokátska kancelária v Prešove. Poskytujeme komplexné právne služby v oblasti trestného, občianskeho, obchodného a daňového práva.">
     <meta name="keywords" content="advokát Prešov, právnik Prešov, advokátska kancelária, trestné právo, občianske právo, obchodné právo, daňové právo, Petrán">
     <meta name="author" content="PETRÁN A PARTNERI ADVOKÁTSKA KANCELÁRIA s.r.o.">
     <meta name="robots" content="index, follow">
@@ -12,14 +12,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.petranpartneri.sk/">
     <meta property="og:title" content="PETRÁN A PARTNERI | Advokátska kancelária Prešov">
-    <meta property="og:description" content="Advokátska kancelária s viac ako 20-ročnou tradíciou. Komplexné právne služby v Prešove a východoslovenskom regióne.">
+    <meta property="og:description" content="Advokátska kancelária v Prešove. Komplexné právne služby v východoslovenskom regióne.">
     <meta property="og:image" content="https://www.petranpartneri.sk/og-image.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.petranpartneri.sk/">
     <meta property="twitter:title" content="PETRÁN A PARTNERI | Advokátska kancelária Prešov">
-    <meta property="twitter:description" content="Advokátska kancelária s viac ako 20-ročnou tradíciou. Komplexné právne služby v Prešove a východoslovenskom regióne.">
+    <meta property="twitter:description" content="Advokátska kancelária v Prešove. Komplexné právne služby v východoslovenskom regióne.">
     
     <link rel="canonical" href="https://www.petranpartneri.sk/">
     
@@ -56,19 +56,12 @@
             text-align: center;
         }
 
-        .preloader-logo {
+        .preloader-logo-img {
             width: 80px;
             height: 80px;
-            background: #c9a962;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 40px;
-            font-weight: 700;
-            color: #0f1729;
+            object-fit: contain;
             margin: 0 auto 24px;
+            display: block;
             animation: preloaderPulse 1.5s ease-in-out infinite;
         }
 
@@ -98,9 +91,9 @@
             --primary: #1a2744;
             --primary-dark: #0f1729;
             --primary-light: #2d3f5f;
-            --accent: #c9a962;
-            --accent-light: #dfc584;
-            --accent-dark: #a88a3d;
+            --accent: #8a9aa8;
+            --accent-light: #a8b5bf;
+            --accent-dark: #647580;
             --white: #ffffff;
             --off-white: #f8f9fa;
             --gray-100: #f1f3f5;
@@ -134,6 +127,185 @@
             --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
         }
 
+        /* ========== DARK MODE ========== */
+        [data-theme="dark"] {
+            --text-dark: #e2e8f0;
+            --text-light: #94a3b8;
+            --gray-200: #1e2d3d;
+            --gray-300: #263545;
+        }
+
+        /* Hlavné pozadia sekcií */
+        [data-theme="dark"] body {
+            background-color: #0d1520;
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .about,
+        [data-theme="dark"] .team,
+        [data-theme="dark"] .faq,
+        [data-theme="dark"] .blog {
+            background: #0d1520;
+        }
+
+        [data-theme="dark"] .services,
+        [data-theme="dark"] .contact {
+            background: #111d2b;
+        }
+
+        /* Karty */
+        [data-theme="dark"] .service-card {
+            background: #182433;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+
+        [data-theme="dark"] .team-card {
+            background: #182433;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+
+        [data-theme="dark"] .blog-card {
+            background: #182433;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+
+        [data-theme="dark"] .contact-info,
+        [data-theme="dark"] .contact-form-wrapper {
+            background: #182433;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+
+        [data-theme="dark"] .why-us-card {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(255,255,255,0.08);
+        }
+
+        /* FAQ */
+        [data-theme="dark"] .faq-item {
+            border-color: #263545;
+        }
+
+        [data-theme="dark"] .faq-question {
+            background: #182433;
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .faq-question:hover,
+        [data-theme="dark"] .faq-item.active .faq-question {
+            background: #1e2d3d;
+        }
+
+        [data-theme="dark"] .faq-answer-content {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .faq-icon {
+            background: #263545;
+        }
+
+        /* Texty */
+        [data-theme="dark"] .section-title,
+        [data-theme="dark"] .service-title,
+        [data-theme="dark"] .team-name,
+        [data-theme="dark"] .blog-card-title,
+        [data-theme="dark"] .about-content h2,
+        [data-theme="dark"] .about-feature h4,
+        [data-theme="dark"] .contact-info h3,
+        [data-theme="dark"] .contact-form-wrapper h3,
+        [data-theme="dark"] .contact-item-content h4,
+        [data-theme="dark"] .faq-question span {
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .service-description,
+        [data-theme="dark"] .about-text,
+        [data-theme="dark"] .team-position,
+        [data-theme="dark"] .blog-card-excerpt,
+        [data-theme="dark"] .contact-info > p,
+        [data-theme="dark"] .contact-item-content p,
+        [data-theme="dark"] .contact-item-content a,
+        [data-theme="dark"] .section-subtitle {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .service-list li {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .about-feature p {
+            color: #94a3b8;
+        }
+
+        /* Delimiters / borders */
+        [data-theme="dark"] .contact-social {
+            border-color: #263545;
+        }
+
+        [data-theme="dark"] .contact-social a {
+            background: #263545;
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .team-contact a {
+            background: #263545;
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .contact-cta-note {
+            background: #111d2b;
+            color: #94a3b8;
+        }
+
+        /* Tlačidlo outline */
+        [data-theme="dark"] .btn-outline {
+            color: #e2e8f0;
+            border-color: #8a9aa8;
+        }
+
+        [data-theme="dark"] .btn-outline:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        /* Blog card image */
+        [data-theme="dark"] .blog-card-image {
+            background: linear-gradient(135deg, #182433 0%, #1e2d3d 100%);
+        }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            margin-left: 12px;
+        }
+
+        [data-theme="dark"] .theme-toggle {
+            color: #e2e8f0;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .theme-toggle svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .theme-toggle .icon-moon { display: block; }
+        .theme-toggle .icon-sun { display: none; }
+        [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+        [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
         html {
             scroll-behavior: smooth;
         }
@@ -145,6 +317,7 @@
             color: var(--text-dark);
             background-color: var(--white);
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* ========== UTILITY CLASSES ========== */
@@ -303,18 +476,10 @@
             color: var(--white);
         }
 
-        .logo-icon {
+        .logo-img {
             width: 48px;
             height: 48px;
-            background: var(--accent);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-heading);
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-dark);
+            object-fit: contain;
         }
 
         .logo-text {
@@ -371,6 +536,8 @@
 
         .nav-cta {
             display: none;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn {
@@ -397,7 +564,7 @@
         .btn-primary:hover {
             background: var(--accent-light);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 169, 98, 0.3);
+            box-shadow: 0 10px 30px rgba(138, 154, 168, 0.3);
         }
 
         .btn-secondary {
@@ -544,7 +711,7 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(201, 169, 98, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(138, 154, 168, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -580,8 +747,8 @@
             align-items: center;
             gap: 10px;
             padding: 10px 20px;
-            background: rgba(201, 169, 98, 0.15);
-            border: 1px solid rgba(201, 169, 98, 0.3);
+            background: rgba(138, 154, 168, 0.15);
+            border: 1px solid rgba(138, 154, 168, 0.3);
             border-radius: 50px;
             margin-bottom: 30px;
             animation: fadeInUp 0.8s ease forwards;
@@ -778,7 +945,7 @@
             flex-shrink: 0;
             width: 48px;
             height: 48px;
-            background: rgba(201, 169, 98, 0.1);
+            background: rgba(138, 154, 168, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -1063,7 +1230,7 @@
         .why-us-icon {
             width: 72px;
             height: 72px;
-            background: rgba(201, 169, 98, 0.2);
+            background: rgba(138, 154, 168, 0.2);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1252,7 +1419,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(201, 169, 98, 0.1);
+            box-shadow: 0 0 0 4px rgba(138, 154, 168, 0.1);
         }
 
         .form-group textarea {
@@ -1270,6 +1437,110 @@
             width: 100%;
             padding: 18px;
             font-size: 16px;
+        }
+
+        /* ========== CONTACT CTA BUTTONS ========== */
+        .contact-cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .contact-cta-btn {
+            width: 100%;
+            padding: 20px 28px;
+            font-size: 18px;
+            justify-content: center;
+        }
+
+        .contact-cta-note {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 20px;
+            background: var(--off-white);
+            border-radius: 12px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .contact-cta-note svg {
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        /* ========== BLOG SECTION ========== */
+        .blog {
+            background: var(--white);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .blog-card-image {
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blog-card-image svg {
+            width: 48px;
+            height: 48px;
+            color: var(--accent);
+            opacity: 0.4;
+        }
+
+        .blog-card-content {
+            padding: 28px;
+        }
+
+        .blog-card-date {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .blog-card-title {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .blog-card-excerpt {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        @media (min-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         /* ========== MAP SECTION ========== */
@@ -1328,18 +1599,10 @@
             margin-bottom: 20px;
         }
 
-        .footer-logo-icon {
+        .footer-logo-img {
             width: 48px;
             height: 48px;
-            background: var(--accent);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-heading);
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-dark);
+            object-fit: contain;
         }
 
         .footer-logo-text {
@@ -1800,19 +2063,20 @@
             }
 
             .nav-cta {
-                display: block;
+                display: flex;
             }
 
             .menu-toggle {
                 display: none;
             }
 
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
+            #themeToggleMobile {
+                display: none !important;
             }
 
-            .hero-image {
-                display: block;
+            .hero-grid {
+                grid-template-columns: 1fr;
+                max-width: 700px;
             }
 
             .hero-stats {
@@ -1888,7 +2152,7 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-content">
-            <div class="preloader-logo">P</div>
+            <img src="logo.png" alt="Logo" class="preloader-logo-img">
             <div class="preloader-text">Načítavam...</div>
         </div>
     </div>
@@ -1898,7 +2162,7 @@
         <div class="container">
             <div class="header-inner">
                 <a href="#" class="logo">
-                    <div class="logo-icon">P</div>
+                    <img src="logo.png" alt="PETRÁN A PARTNERI logo" class="logo-img">
                     <div class="logo-text">PETRÁN <span>&</span> PARTNERI</div>
                 </a>
 
@@ -1907,15 +2171,23 @@
                         <li><a href="#o-nas">O nás</a></li>
                         <li><a href="#sluzby">Služby</a></li>
                         <li><a href="#tim">Náš tím</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#blog">Blog</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
                     </ul>
                 </nav>
 
-                <div class="nav-cta">
+                <div class="nav-cta" style="display:flex;align-items:center;gap:8px;">
                     <a href="#kontakt" class="btn btn-primary">Konzultácia zdarma</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Prepnúť tmavý režim">
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </button>
                 </div>
 
+                <button class="theme-toggle" id="themeToggleMobile" aria-label="Prepnúť tmavý režim" style="display:flex;">
+                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                </button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu">
                     <span></span>
                     <span></span>
@@ -1930,7 +2202,7 @@
                 <li><a href="#o-nas">O nás</a></li>
                 <li><a href="#sluzby">Služby</a></li>
                 <li><a href="#tim">Náš tím</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
             <div class="nav-mobile-contact">
@@ -1960,13 +2232,6 @@
                 <div class="hero-content">
                     <div class="hero-grid">
                         <div class="hero-text">
-                            <div class="hero-badge">
-                                <svg class="hero-badge-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
-                                <span>20+ rokov skúseností</span>
-                            </div>
-
                             <h1 class="hero-title">
                                 Právna pomoc,<br>
                                 ktorej môžete <span>dôverovať</span>
@@ -1988,26 +2253,16 @@
 
                             <div class="hero-stats">
                                 <div class="hero-stat">
-                                    <div class="hero-stat-value">20+</div>
-                                    <div class="hero-stat-label">Rokov praxe</div>
-                                </div>
-                                <div class="hero-stat">
                                     <div class="hero-stat-value">3</div>
-                                    <div class="hero-stat-label">Špecializovaní advokáti</div>
+                                    <div class="hero-stat-label">Skúsení advokáti</div>
                                 </div>
                                 <div class="hero-stat">
                                     <div class="hero-stat-value">4</div>
                                     <div class="hero-stat-label">Oblasti práva</div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="hero-image">
-                            <div class="hero-image-wrapper">
-                                <div class="hero-image-placeholder">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
-                                    </svg>
+                                <div class="hero-stat">
+                                    <div class="hero-stat-value">100+</div>
+                                    <div class="hero-stat-label">Spokojných klientov</div>
                                 </div>
                             </div>
                         </div>
@@ -2019,27 +2274,16 @@
         <!-- About Section -->
         <section class="about section" id="o-nas">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-image animate-on-scroll">
-                        <div class="about-image-main">
-                            <div class="about-image-placeholder">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="about-image-accent"></div>
-                    </div>
-
-                    <div class="about-content animate-on-scroll delay-2">
-                        <h2>Advokátska kancelária s <span>20-ročnou tradíciou</span></h2>
+                <div class="about-grid" style="grid-template-columns: 1fr;">
+                    <div class="about-content animate-on-scroll">
+                        <h2>Advokátska kancelária, <span>ktorej môžete dôverovať</span></h2>
                         
                         <p class="about-text">
-                            <strong>PETRÁN A PARTNERI</strong> je etablovaná východoslovenská právna prax sídliaca v Prešove. Od roku 2007 poskytujeme komplexné právne služby klientom z celého východoslovenského regiónu.
+                            <strong>PETRÁN A PARTNERI</strong> je etablovaná východoslovenská advokátska kancelária sídliaca v Prešove. Poskytujeme komplexné právne služby klientom z celého východoslovenského regiónu.
                         </p>
                         
                         <p class="about-text">
-                            Náš tím tvoria traja skúsení advokáti, z ktorých každý sa špecializuje na konkrétnu oblasť práva. Vďaka tomu dokážeme poskytnúť odborné právne poradenstvo na najvyššej úrovni v oblasti trestného, občianskeho, obchodného aj daňového práva.
+                            Náš tím tvoria traja skúsení advokáti, ktorí spoločne pokrývajú všetky kľúčové oblasti práva — trestné, občianske, obchodné aj daňové. Vďaka tomu dokážeme poskytnúť odborné právne poradenstvo na najvyššej úrovni.
                         </p>
 
                         <p class="about-text">
@@ -2243,86 +2487,44 @@
             <div class="container">
                 <div class="section-header animate-on-scroll">
                     <span class="section-label">Náš tím</span>
-                    <h2 class="section-title">Špecializovaní advokáti</h2>
-                    <p class="section-subtitle">Poznajte náš tím skúsených právnikov, ktorí sa postarajú o vaše právne záležitosti</p>
+                    <h2 class="section-title">Naši advokáti</h2>
+                    <p class="section-subtitle">Tím skúsených právnikov, ktorí sa postarajú o vaše právne záležitosti</p>
                 </div>
 
                 <div class="team-grid">
-                    <!-- JUDr. Ondrej Petrán -->
-                    <article class="team-card animate-on-scroll delay-1">
-                        <div class="team-image">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                        </div>
-                        <div class="team-content">
+                    <article class="team-card animate-on-scroll delay-1" style="text-align:center;">
+                        <div class="team-content" style="padding: 40px 28px;">
+                            <div style="width:64px;height:64px;background:linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--accent)">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
                             <h3 class="team-name">JUDr. Ondrej Petrán</h3>
-                            <p class="team-position">Konateľ / Partner</p>
-                            <p class="team-specialization">Špecializácia na obchodné a korporátne právo. Vedenie kancelárie a zastupovanie v obchodnoprávnych sporoch.</p>
-                            <div class="team-contact">
-                                <a href="mailto:petran@apartneri.sk" aria-label="Email">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                    </svg>
-                                </a>
-                            </div>
+                            <p class="team-position">Advokát / Partner</p>
                         </div>
                     </article>
 
-                    <!-- JUDr. Jakub Štefanko -->
-                    <article class="team-card animate-on-scroll delay-2">
-                        <div class="team-image">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                        </div>
-                        <div class="team-content">
+                    <article class="team-card animate-on-scroll delay-2" style="text-align:center;">
+                        <div class="team-content" style="padding: 40px 28px;">
+                            <div style="width:64px;height:64px;background:linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--accent)">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
+                            </div>
                             <h3 class="team-name">JUDr. Jakub Štefanko</h3>
-                            <p class="team-position">Konateľ / Partner</p>
-                            <p class="team-specialization">Špecializácia na občianske, pracovné a daňové právo. Príprava zmlúv a zastupovanie v súdnych konaniach.</p>
-                            <div class="team-contact">
-                                <a href="mailto:petran@apartneri.sk" aria-label="Email">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                    </svg>
-                                </a>
-                            </div>
+                            <p class="team-position">Advokát / Partner</p>
                         </div>
                     </article>
 
-                    <!-- JUDr. Štefan Ščerbák -->
-                    <article class="team-card animate-on-scroll delay-3">
-                        <div class="team-image">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                        </div>
-                        <div class="team-content">
-                            <h3 class="team-name">JUDr. Štefan Ščerbák</h3>
-                            <p class="team-position">Konateľ / Partner</p>
-                            <p class="team-specialization">Špecializácia na trestné právo a obhajobu. Zastupovanie v trestnom konaní a obchodnoprávnych sporoch.</p>
-                            <div class="team-contact">
-                                <a href="mailto:petran@apartneri.sk" aria-label="Email">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                    </svg>
-                                </a>
-                                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                    </svg>
-                                </a>
+                    <article class="team-card animate-on-scroll delay-3" style="text-align:center;">
+                        <div class="team-content" style="padding: 40px 28px;">
+                            <div style="width:64px;height:64px;background:linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:var(--accent)">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                                </svg>
                             </div>
+                            <h3 class="team-name">JUDr. Štefan Ščerbák</h3>
+                            <p class="team-position">Advokát / Partner</p>
                         </div>
                     </article>
                 </div>
@@ -2342,10 +2544,10 @@
                     <div class="why-us-card animate-on-scroll delay-1">
                         <div class="why-us-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                             </svg>
                         </div>
-                        <h3>20+ rokov skúseností</h3>
+                        <h3>Overená kvalita</h3>
                         <p>Dlhoročná prax a overené výsledky v poskytovaní právnych služieb na najvyššej úrovni.</p>
                     </div>
 
@@ -2378,6 +2580,58 @@
                         <h3>Férové ceny</h3>
                         <p>Transparentné a konkurencieschopné ceny služieb. O nákladoch vás vždy vopred informujeme.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog section" id="blog">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-label">Blog</span>
+                    <h2 class="section-title">Právne aktuality</h2>
+                    <p class="section-subtitle">Sledujte najnovšie informácie zo sveta práva a legislatívne zmeny</p>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card animate-on-scroll delay-1">
+                        <div class="blog-card-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                            </svg>
+                        </div>
+                        <div class="blog-card-content">
+                            <p class="blog-card-date">Marec 2026</p>
+                            <h3 class="blog-card-title">Novela Trestného zákona — čo sa mení?</h3>
+                            <p class="blog-card-excerpt">Prehľad najdôležitejších zmien v trestnom zákonodárstve a ich vplyv na prax.</p>
+                        </div>
+                    </article>
+
+                    <article class="blog-card animate-on-scroll delay-2">
+                        <div class="blog-card-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="blog-card-content">
+                            <p class="blog-card-date">Február 2026</p>
+                            <h3 class="blog-card-title">Ako správne uzatvoriť nájomnú zmluvu</h3>
+                            <p class="blog-card-excerpt">Praktické rady, na čo si dať pozor pri uzatváraní nájomných zmlúv.</p>
+                        </div>
+                    </article>
+
+                    <article class="blog-card animate-on-scroll delay-3">
+                        <div class="blog-card-image">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="blog-card-content">
+                            <p class="blog-card-date">Január 2026</p>
+                            <h3 class="blog-card-title">Založenie s.r.o. v roku 2026 krok za krokom</h3>
+                            <p class="blog-card-excerpt">Kompletný sprievodca založením spoločnosti s ručením obmedzeným podľa aktuálnej legislatívy.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -2447,54 +2701,33 @@
                             </div>
                         </div>
 
-                        <div class="contact-social">
-                            <a href="https://www.facebook.com/PetranPartneriAdvokatskakancelaria" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
 
                     <div class="contact-form-wrapper animate-on-scroll delay-2">
-                        <h3>Napíšte nám</h3>
-                        <p>Vyplňte formulár a ozveme sa vám do 24 hodín.</p>
+                        <h3>Zavolajte nám</h3>
+                        <p>Neváhajte nás kontaktovať telefonicky alebo emailom. Sme tu pre vás.</p>
                         
-                        <form class="contact-form" action="#" method="POST">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Meno a priezvisko *</label>
-                                    <input type="text" id="name" name="name" required placeholder="Ján Novák">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Telefón</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+421 9XX XXX XXX">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="vas@email.sk">
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Predmet</label>
-                                <input type="text" id="subject" name="subject" placeholder="Napr. Konzultácia - obchodné právo">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Správa *</label>
-                                <textarea id="message" name="message" required placeholder="Popíšte vašu právnu situáciu alebo otázku..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        <div class="contact-cta-buttons">
+                            <a href="tel:+421517721365" class="btn btn-primary contact-cta-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                 </svg>
-                                Odoslať správu
-                            </button>
-                        </form>
+                                +421 51 77 21 365
+                            </a>
+                            <a href="mailto:petran@apartneri.sk" class="btn btn-outline contact-cta-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                petran@apartneri.sk
+                            </a>
+                        </div>
+
+                        <div class="contact-cta-note">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Na mobile stačí stlačiť tlačidlo a rovno vás spojí.</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2627,22 +2860,10 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="footer-logo-icon">P</div>
+                        <img src="logo.png" alt="PETRÁN A PARTNERI logo" class="footer-logo-img">
                         <div class="footer-logo-text">PETRÁN <span>&</span> PARTNERI</div>
                     </div>
-                    <p>Advokátska kancelária s viac ako 20-ročnou tradíciou. Poskytujeme komplexné právne služby v oblasti trestného, občianskeho, obchodného a daňového práva.</p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/PetranPartneriAdvokatskakancelaria" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                    </div>
+                    <p>Advokátska kancelária v Prešove. Poskytujeme komplexné právne služby v oblasti trestného, občianskeho, obchodného a daňového práva.</p>
                 </div>
 
                 <div class="footer-links">
@@ -2651,7 +2872,7 @@
                         <li><a href="#o-nas">O nás</a></li>
                         <li><a href="#sluzby">Služby</a></li>
                         <li><a href="#tim">Náš tím</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#blog">Blog</a></li>
                         <li><a href="#kontakt">Kontakt</a></li>
                     </ul>
                 </div>
@@ -2887,27 +3108,28 @@
             cookieConsent.classList.remove('visible');
         });
 
-        // ========== CONTACT FORM ==========
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Simple validation feedback
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                
-                submitBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Odosielam...';
-                submitBtn.disabled = true;
-                
-                setTimeout(() => {
-                    alert('Ďakujeme za vašu správu! Ozveme sa vám do 24 hodín.');
-                    this.reset();
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                }, 1000);
-            });
+        // ========== DARK MODE ==========
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
         }
+
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+
+        document.getElementById('themeToggle').addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        document.getElementById('themeToggleMobile').addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
     </script>
 </body>
 </html>
