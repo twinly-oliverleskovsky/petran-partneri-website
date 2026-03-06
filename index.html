@@ -21,6 +21,18 @@
     <meta property="twitter:title" content="PETRÁN A PARTNERI | Advokátska kancelária Prešov">
     <meta property="twitter:description" content="Advokátska kancelária v Prešove. Komplexné právne služby v východoslovenskom regióne.">
     
+    <!-- Extended Open Graph -->
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:site_name" content="PETRÁN A PARTNERI Advokátska kancelária">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="SK-PV">
+    <meta name="geo.placename" content="Prešov">
+    <meta name="geo.position" content="48.9965767;21.2372403">
+    <meta name="ICBM" content="48.9965767, 21.2372403">
+    
     <link rel="canonical" href="https://www.petranpartneri.sk/">
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="apple-touch-icon" href="logo.png">
@@ -2035,6 +2047,162 @@
             margin-bottom: 8px;
         }
 
+        /* ========== PRIVACY MODAL ========== */
+        .privacy-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .privacy-modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .privacy-modal {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            transform: translateY(20px) scale(0.97);
+            transition: transform 0.3s ease;
+        }
+
+        .privacy-modal-overlay.visible .privacy-modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .privacy-modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 32px 20px;
+            border-bottom: 1px solid var(--gray-200);
+            flex-shrink: 0;
+        }
+
+        .privacy-modal-header h2 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .privacy-modal-close {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background: var(--gray-100);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            flex-shrink: 0;
+        }
+
+        .privacy-modal-close:hover {
+            background: var(--gray-200);
+        }
+
+        .privacy-modal-close svg {
+            width: 20px;
+            height: 20px;
+            color: var(--gray-700);
+        }
+
+        .privacy-modal-body {
+            padding: 28px 32px 32px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .privacy-modal-body h3 {
+            font-family: var(--font-heading);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 28px 0 12px;
+        }
+
+        .privacy-modal-body h3:first-child {
+            margin-top: 0;
+        }
+
+        .privacy-modal-body p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .privacy-modal-body ul {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            font-size: 15px;
+        }
+
+        .privacy-modal-body li {
+            margin-bottom: 6px;
+        }
+
+        .privacy-modal-body strong {
+            color: var(--text-dark);
+        }
+
+        [data-theme="dark"] .privacy-modal {
+            background: #182433;
+        }
+
+        [data-theme="dark"] .privacy-modal-header {
+            border-color: #263545;
+        }
+
+        [data-theme="dark"] .privacy-modal-header h2 {
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .privacy-modal-close {
+            background: #263545;
+        }
+
+        [data-theme="dark"] .privacy-modal-close:hover {
+            background: #1e2d3d;
+        }
+
+        [data-theme="dark"] .privacy-modal-close svg {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .privacy-modal-body h3 {
+            color: #e2e8f0;
+        }
+
+        [data-theme="dark"] .privacy-modal-body p,
+        [data-theme="dark"] .privacy-modal-body ul {
+            color: #94a3b8;
+        }
+
+        [data-theme="dark"] .privacy-modal-body strong {
+            color: #e2e8f0;
+        }
+
         /* ========== BACK TO TOP ========== */
         .back-to-top {
             position: fixed;
@@ -2196,6 +2364,254 @@
             }
         }
     </style>
+
+    <!-- Structured Data: LegalService (Local Business) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "@id": "https://www.petranpartneri.sk/#organization",
+        "name": "PETRÁN A PARTNERI ADVOKÁTSKA KANCELÁRIA s.r.o.",
+        "alternateName": "Petrán a Partneri",
+        "url": "https://www.petranpartneri.sk/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.petranpartneri.sk/logo.png",
+            "width": 512,
+            "height": 512
+        },
+        "image": "https://www.petranpartneri.sk/og-image.jpg",
+        "description": "Etablovaná východoslovenská advokátska kancelária v Prešove poskytujúca komplexné právne služby v oblasti trestného, občianskeho, obchodného a daňového práva.",
+        "telephone": "+421517721365",
+        "email": "petran@apartneri.sk",
+        "foundingDate": "2010",
+        "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "value": 3
+        },
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Cash, Bank Transfer",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Puškinova 16",
+            "addressLocality": "Prešov",
+            "postalCode": "080 01",
+            "addressRegion": "Prešovský kraj",
+            "addressCountry": {
+                "@type": "Country",
+                "name": "SK"
+            }
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 48.9965767,
+            "longitude": 21.2372403
+        },
+        "hasMap": "https://www.google.com/maps?q=Puškinova+16,+080+01+Prešov",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "17:00"
+            }
+        ],
+        "areaServed": [
+            {
+                "@type": "AdministrativeArea",
+                "name": "Prešovský kraj"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Košický kraj"
+            },
+            {
+                "@type": "Country",
+                "name": "Slovensko"
+            }
+        ],
+        "knowsLanguage": ["sk", "cs", "en"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Právne služby",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Trestné právo",
+                    "itemListElement": [
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Obhajoba v trestnom konaní"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Právna pomoc svedkom"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Preventívne konzultácie"}}
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Občianske právo",
+                    "itemListElement": [
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rodinné právo a rozvody"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Prevody nehnuteľností"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vypracovanie zmlúv"}}
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Obchodné právo",
+                    "itemListElement": [
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Obchodné spory a rokovania"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Korporátne právo"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Due diligence transakcií"}}
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Daňové právo",
+                    "itemListElement": [
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Zastupovanie v daňovom konaní"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DPH a priame dane"}},
+                        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Správne žaloby"}}
+                    ]
+                }
+            ]
+        },
+        "employee": [
+            {
+                "@type": "Person",
+                "name": "JUDr. Ondrej Petrán",
+                "jobTitle": "Advokát, Partner",
+                "worksFor": {"@id": "https://www.petranpartneri.sk/#organization"}
+            },
+            {
+                "@type": "Person",
+                "name": "JUDr. Jakub Štefanko",
+                "jobTitle": "Advokát, Partner",
+                "worksFor": {"@id": "https://www.petranpartneri.sk/#organization"}
+            },
+            {
+                "@type": "Person",
+                "name": "JUDr. Štefan Ščerbák",
+                "jobTitle": "Advokát, Partner",
+                "worksFor": {"@id": "https://www.petranpartneri.sk/#organization"}
+            }
+        ],
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Slovenská advokátska komora",
+            "url": "https://www.sak.sk"
+        },
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Koľko stojí prvá konzultácia?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prvá konzultácia je nezáväzná a slúži na oboznámenie sa s vaším prípadom. Počas nej zhodnotíme vašu právnu situáciu a navrhneme ďalší postup. Cena za ďalšie právne služby závisí od náročnosti prípadu a bude vám vopred odkomunikovaná."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ako dlho trvá vybavenie prípadu?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dĺžka vybavenia závisí od typu a náročnosti prípadu. Jednoduché právne úkony (zmluvy, podania) vybavujeme do niekoľkých dní. Súdne konania môžu trvať niekoľko mesiacov až rokov v závislosti od zložitosti. O predpokladanom časovom horizonte vás vždy informujeme na začiatku spolupráce."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Zastupujete klientov aj mimo Prešova?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Áno, naše služby poskytujeme klientom z celého Slovenska. Hoci sídlime v Prešove, pravidelne zastupujeme klientov pred súdmi a úradmi po celej krajine. Konzultácie je možné realizovať aj online formou videohovoru."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ako prebieha prvé stretnutie?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Na prvom stretnutí si vypočujeme váš prípad, preštudujeme dostupné dokumenty a zhodnotíme právnu situáciu. Následne vám vysvetlíme možnosti riešenia, právne riziká a odporučíme najvhodnejší postup. Stretnutie trvá zvyčajne 30-60 minút."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Aké dokumenty potrebujem priniesť?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prineste všetky dokumenty súvisiace s vaším prípadom - zmluvy, korešpondenciu, súdne rozhodnutia, faktúry a pod. Ak si nie ste istí, kontaktujte nás vopred a poradíme vám, čo je potrebné. Čím viac informácií nám poskytnete, tým lepšie vám vieme pomôcť."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Je možné platiť na splátky?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Áno, pri rozsiahlejších prípadoch ponúkame možnosť úhrady na splátky. Podmienky splátkového kalendára dohodneme individuálne podľa charakteru prípadu a vašich možností. O cenách a platobných podmienkach vás vždy transparentne informujeme vopred."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PETRÁN A PARTNERI | Advokátska kancelária Prešov",
+        "url": "https://www.petranpartneri.sk/",
+        "description": "Advokátska kancelária v Prešove. Komplexné právne služby v oblasti trestného, občianskeho, obchodného a daňového práva.",
+        "publisher": {"@id": "https://www.petranpartneri.sk/#organization"},
+        "inLanguage": "sk",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.petranpartneri.sk/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Domov",
+                "item": "https://www.petranpartneri.sk/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Služby",
+                "item": "https://www.petranpartneri.sk/#sluzby"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Náš tím",
+                "item": "https://www.petranpartneri.sk/#tim"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Kontakt",
+                "item": "https://www.petranpartneri.sk/#kontakt"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Preloader -->
@@ -2965,7 +3381,7 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 PETRÁN A PARTNERI ADVOKÁTSKA KANCELÁRIA s.r.o. | IČO: 36 854 581</p>
                 <div class="footer-bottom-links">
-                    <a href="#">Ochrana osobných údajov</a>
+                    <a href="#" id="openPrivacyPolicy">Ochrana osobných údajov</a>
                     <a href="#">Obchodné podmienky</a>
                 </div>
             </div>
@@ -2992,11 +3408,99 @@
     <div class="cookie-consent" id="cookieConsent">
         <div class="cookie-consent-inner">
             <p class="cookie-consent-text">
-                Táto webstránka používa cookies na zlepšenie vášho zážitku z prehliadania. Používaním našej stránky súhlasíte s používaním cookies v súlade s našimi <a href="#">zásadami ochrany súkromia</a>.
+                Táto webstránka používa cookies na zlepšenie vášho zážitku z prehliadania. Používaním našej stránky súhlasíte s používaním cookies v súlade s našimi <a href="#" class="open-privacy-link">zásadami ochrany súkromia</a>.
             </p>
             <div class="cookie-consent-buttons">
                 <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Súhlasím</button>
                 <button class="cookie-btn cookie-btn-decline" id="cookieDecline">Odmietnuť</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="privacy-modal-overlay" id="privacyModal">
+        <div class="privacy-modal">
+            <div class="privacy-modal-header">
+                <h2>Ochrana osobných údajov</h2>
+                <button class="privacy-modal-close" id="privacyModalClose" aria-label="Zavrieť">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="privacy-modal-body">
+                <h3>1. Prevádzkovateľ</h3>
+                <p><strong>PETRÁN A PARTNERI ADVOKÁTSKA KANCELÁRIA s.r.o.</strong><br>
+                Sídlo: Puškinova 16, 080 01 Prešov<br>
+                IČO: 36 854 581<br>
+                E-mail: petran@apartneri.sk<br>
+                Telefón: +421 51 77 21 365</p>
+                <p>Prevádzkovateľ spracúva osobné údaje v súlade s Nariadením Európskeho parlamentu a Rady (EÚ) 2016/679 o ochrane fyzických osôb pri spracúvaní osobných údajov (ďalej len „GDPR") a zákonom č. 18/2018 Z. z. o ochrane osobných údajov.</p>
+
+                <h3>2. Účely a právne základy spracovania</h3>
+                <p>Vaše osobné údaje spracúvame na tieto účely:</p>
+                <ul>
+                    <li><strong>Poskytovanie právnych služieb</strong> — spracovanie údajov nevyhnutných na plnenie zmluvy o poskytovaní právnych služieb (čl. 6 ods. 1 písm. b) GDPR)</li>
+                    <li><strong>Plnenie zákonných povinností</strong> — vedenie účtovníctva, daňové povinnosti, povinnosti podľa zákona o advokácii (čl. 6 ods. 1 písm. c) GDPR)</li>
+                    <li><strong>Komunikácia</strong> — odpovede na vaše telefonické a e-mailové otázky na základe oprávneného záujmu alebo vášho súhlasu (čl. 6 ods. 1 písm. a) a f) GDPR)</li>
+                    <li><strong>Ochrana právnych nárokov</strong> — uplatňovanie a obhajoba právnych nárokov na základe oprávneného záujmu (čl. 6 ods. 1 písm. f) GDPR)</li>
+                </ul>
+
+                <h3>3. Rozsah spracúvaných údajov</h3>
+                <p>Spracúvame najmä nasledovné kategórie osobných údajov:</p>
+                <ul>
+                    <li>Identifikačné údaje (meno, priezvisko, titul, dátum narodenia, rodné číslo)</li>
+                    <li>Kontaktné údaje (adresa bydliska, e-mail, telefónne číslo)</li>
+                    <li>Údaje súvisiace s poskytovaním právnych služieb (obsah právneho prípadu, korešpondencia, zmluvy, súdne rozhodnutia)</li>
+                    <li>Fakturačné údaje (bankové spojenie, platobné údaje)</li>
+                </ul>
+
+                <h3>4. Príjemcovia osobných údajov</h3>
+                <p>Osobné údaje môžu byť poskytnuté tretím stranám výlučne v rozsahu nevyhnutnom na plnenie našich zmluvných a zákonných povinností:</p>
+                <ul>
+                    <li>Súdy a orgány verejnej moci (v rámci právneho zastupovania)</li>
+                    <li>Protistrany a ich právni zástupcovia (v rámci právneho zastupovania)</li>
+                    <li>Poskytovatelia účtovných a IT služieb (sprostredkovatelia)</li>
+                    <li>Slovenská advokátska komora (v zákonom stanovených prípadoch)</li>
+                </ul>
+                <p>Osobné údaje nezasielame do tretích krajín mimo EÚ/EHP.</p>
+
+                <h3>5. Doba uchovávania</h3>
+                <p>Osobné údaje uchovávame po dobu:</p>
+                <ul>
+                    <li><strong>Počas trvania zmluvného vzťahu</strong> a ďalších 10 rokov po jeho ukončení (v súlade so zákonom o advokácii)</li>
+                    <li><strong>Účtovné doklady</strong> — 10 rokov (zákon o účtovníctve)</li>
+                    <li><strong>Komunikácia (e-mail, telefón)</strong> — 3 roky od posledného kontaktu, ak nevznikol zmluvný vzťah</li>
+                </ul>
+
+                <h3>6. Vaše práva</h3>
+                <p>Ako dotknutá osoba máte právo:</p>
+                <ul>
+                    <li><strong>Právo na prístup</strong> — získať potvrdenie o tom, či sa vaše údaje spracúvajú, a prístup k nim</li>
+                    <li><strong>Právo na opravu</strong> — požiadať o opravu nesprávnych údajov</li>
+                    <li><strong>Právo na vymazanie</strong> — požiadať o vymazanie údajov, ak pominul účel spracovania</li>
+                    <li><strong>Právo na obmedzenie spracovania</strong> — požiadať o obmedzenie spracovania v zákonom stanovených prípadoch</li>
+                    <li><strong>Právo na prenosnosť údajov</strong> — získať údaje v štruktúrovanom formáte</li>
+                    <li><strong>Právo namietať</strong> — namietať proti spracovaniu na základe oprávneného záujmu</li>
+                    <li><strong>Právo odvolať súhlas</strong> — kedykoľvek odvolať udelený súhlas</li>
+                    <li><strong>Právo podať sťažnosť</strong> — podať sťažnosť Úradu na ochranu osobných údajov SR (www.dataprotection.gov.sk)</li>
+                </ul>
+                <p>Svoje práva si môžete uplatniť písomne na adrese sídla kancelárie alebo e-mailom na petran@apartneri.sk.</p>
+
+                <h3>7. Súbory cookies</h3>
+                <p>Táto webová stránka používa cookies — malé textové súbory ukladané vo vašom prehliadači. Používame:</p>
+                <ul>
+                    <li><strong>Nevyhnutné cookies</strong> — zabezpečujú základnú funkčnosť stránky (napr. zapamätanie voľby cookies, tmavý režim). Tieto cookies nevyžadujú váš súhlas.</li>
+                    <li><strong>Analytické cookies</strong> — pomáhajú nám pochopiť, ako návštevníci používajú stránku. Spracúvajú sa len s vaším súhlasom.</li>
+                </ul>
+                <p>Súhlas s cookies môžete kedykoľvek odvolať vymazaním cookies vo vašom prehliadači.</p>
+
+                <h3>8. Bezpečnosť údajov</h3>
+                <p>Prijali sme primerané technické a organizačné opatrenia na ochranu vašich osobných údajov pred neoprávneným prístupom, zmenou, zverejnením alebo zničením. Ako advokátska kancelária sme viazaní povinnosťou mlčanlivosti podľa § 23 zákona č. 586/2003 Z. z. o advokácii.</p>
+
+                <h3>9. Záverečné ustanovenia</h3>
+                <p>Tieto zásady ochrany osobných údajov sú platné a účinné od 1. marca 2026. Vyhradzujeme si právo tieto zásady kedykoľvek aktualizovať. O prípadných zmenách vás budeme informovať zverejnením aktualizovanej verzie na tejto stránke.</p>
+                <p>Posledná aktualizácia: 6. marca 2026</p>
             </div>
         </div>
     </div>
@@ -3155,6 +3659,37 @@
         cookieDecline.addEventListener('click', () => {
             localStorage.setItem('cookieConsent', 'declined');
             cookieConsent.classList.remove('visible');
+        });
+
+        // ========== PRIVACY POLICY MODAL ==========
+        const privacyModal = document.getElementById('privacyModal');
+        const privacyModalClose = document.getElementById('privacyModalClose');
+
+        function openPrivacyModal(e) {
+            if (e) e.preventDefault();
+            privacyModal.classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyModal() {
+            privacyModal.classList.remove('visible');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('openPrivacyPolicy').addEventListener('click', openPrivacyModal);
+        document.querySelectorAll('.open-privacy-link').forEach(link => {
+            link.addEventListener('click', openPrivacyModal);
+        });
+        privacyModalClose.addEventListener('click', closePrivacyModal);
+
+        privacyModal.addEventListener('click', (e) => {
+            if (e.target === privacyModal) closePrivacyModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && privacyModal.classList.contains('visible')) {
+                closePrivacyModal();
+            }
         });
 
         // ========== DARK MODE ==========
